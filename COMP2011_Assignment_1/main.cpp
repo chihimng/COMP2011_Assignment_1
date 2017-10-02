@@ -101,7 +101,37 @@ int getValidInput(char currentPlayerSymbol, char s1, char s2, char s3, char s4, 
  */
 void putSymbol(int input, char currentPlayerSymbol, char& s1, char& s2, char& s3, char& s4, char& s5, char& s6, char& s7, char& s8, char& s9)
 {
-
+    switch (input) {
+        case 1:
+            s1 = currentPlayerSymbol;
+            break;
+        case 2:
+            s2 = currentPlayerSymbol;
+            break;
+        case 3:
+            s3 = currentPlayerSymbol;
+            break;
+        case 4:
+            s4 = currentPlayerSymbol;
+            break;
+        case 5:
+            s5 = currentPlayerSymbol;
+            break;
+        case 6:
+            s6 = currentPlayerSymbol;
+            break;
+        case 7:
+            s7 = currentPlayerSymbol;
+            break;
+        case 8:
+            s8 = currentPlayerSymbol;
+            break;
+        case 9:
+            s9 = currentPlayerSymbol;
+            break;
+        default:
+            break;
+    }
 }
 
 /*
