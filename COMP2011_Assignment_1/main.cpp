@@ -145,7 +145,23 @@ void putSymbol(int input, char currentPlayerSymbol, char& s1, char& s2, char& s3
  */
 int getGameState(char s1, char s2, char s3, char s4, char s5, char s6, char s7, char s8, char s9)
 {
-
+    if ((s1 == s2 && s2 == s3) || (s1 == s5 && s5 == s9) || (s1 == s4 && s4 == s7)) {
+        return s1 == 'X' ? 1 : 2;
+    } else if (s4 == s5 && s5 == s6) {
+        return s4 == 'X' ? 1 : 2;
+    } else if (s7 == s8 && s8 == s9) {
+        return s7 == 'X' ? 1 : 2;
+    } else if (s2 == s5 && s5 == s8) {
+        return s2 == 'X' ? 1 : 2;
+    } else if ((s3 == s6 && s6 == s9) || (s3 == s5 && s5 == s7)) {
+        return s3 == 'X' ? 1 : 2;
+    } else if (s1 != '1' && s2 != '2' && s3 != '3' && s4 != '4' && s5 != '5' && s6 != '6' && s7 != '7' && s8 !='8' && s9 != '9'){
+        // some default values not changed
+        return -1;
+    } else {
+        // all default values changed, no winner
+        return 0;
+    }
 }
 
 /*
