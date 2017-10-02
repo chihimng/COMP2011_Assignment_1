@@ -50,7 +50,7 @@ void printQuestion(char currentPlayerSymbol)
  */
 char getCurrentPlayerSymbol(int roundNumber)
 {
-
+    return roundNumber % 2 ? 'X' : 'O';
 }
 
 /*
