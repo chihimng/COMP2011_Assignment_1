@@ -165,10 +165,10 @@ int getGameState(char s1, char s2, char s3, char s4, char s5, char s6, char s7, 
     } else if ((s3 == s6 && s6 == s9) || (s3 == s5 && s5 == s7)) {
         return s3 == 'X' ? 1 : 2;
     } else if (s1 != '1' && s2 != '2' && s3 != '3' && s4 != '4' && s5 != '5' && s6 != '6' && s7 != '7' && s8 !='8' && s9 != '9'){
-        // some default values not changed
+        // all default values changed, no winner
         return -1;
     } else {
-        // all default values changed, no winner
+        // game continue
         return 0;
     }
 }
